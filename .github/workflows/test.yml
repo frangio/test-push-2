@@ -8,3 +8,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: cpina/github-action-push-to-another-repository@cbe757f8d8b380dd2b3ceec5a80fbcd61f1f3107
+        with:
+          source_directory: .
+          destination-github-username: frangio
+          destination-repository-name: test-push-2
+          create-target-branch-if-needed: true
