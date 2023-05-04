@@ -15,4 +15,5 @@ jobs:
           source_directory: .
           destination-github-username: frangio
           destination-repository-name: test-push-2
+          target-branch: master
           create-target-branch-if-needed: true
