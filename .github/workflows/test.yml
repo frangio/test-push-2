@@ -8,12 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: cpina/github-action-push-to-another-repository@cbe757f8d8b380dd2b3ceec5a80fbcd61f1f3107
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - uses: ad-m/github-push-action@master
         with:
-          source_directory: .
-          destination-github-username: frangio
-          destination-repository-name: test-push-2
-          target-branch: master
-          create-target-branch-if-needed: true
+          github_token: ${{ secrets.API_TOKEN_GITHUB }}
+          branch: ${{ github.ref }}
